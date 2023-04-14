@@ -78,6 +78,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E11E4C5B29E9BF6800A15049 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E1E7D01F29E9BC6700942264 /* AppDelegate.swift */,
+				E1E7D02129E9BC6700942264 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E11E4C5C29E9BF7000A15049 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1E7D02B29E9BC6D00942264 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E11E4C5E29E9C07D00A15049 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E11E4C5F29E9C07F00A15049 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E11E4C6029E9C08200A15049 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		E11E4C6129E9C09900A15049 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		E1E7D01329E9BC6700942264 = {
 			isa = PBXGroup;
 			children = (
@@ -101,11 +146,14 @@
 		E1E7D01E29E9BC6700942264 /* pokemon */ = {
 			isa = PBXGroup;
 			children = (
-				E1E7D01F29E9BC6700942264 /* AppDelegate.swift */,
-				E1E7D02129E9BC6700942264 /* SceneDelegate.swift */,
+				E11E4C5B29E9BF6800A15049 /* Application */,
+				E11E4C5E29E9C07D00A15049 /* Data */,
+				E11E4C5F29E9C07F00A15049 /* Domain */,
+				E11E4C6029E9C08200A15049 /* Presentation */,
 				E1E7D02329E9BC6700942264 /* ViewController.swift */,
 				E1E7D02529E9BC6700942264 /* Main.storyboard */,
-				E1E7D02B29E9BC6D00942264 /* Assets.xcassets */,
+				E11E4C5C29E9BF7000A15049 /* Supporting Files */,
+				E11E4C6129E9C09900A15049 /* Utilities */,
 				E1E7D02D29E9BC6D00942264 /* LaunchScreen.storyboard */,
 				E1E7D03029E9BC6D00942264 /* Info.plist */,
 				E1E7D02829E9BC6700942264 /* pokemon.xcdatamodeld */,
@@ -444,11 +492,13 @@
 				DEVELOPMENT_TEAM = Q3UF58D23J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = pokemon/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Pokedex;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,9 +506,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yxgg.pokemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -472,11 +525,13 @@
 				DEVELOPMENT_TEAM = Q3UF58D23J;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = pokemon/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Pokedex;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -484,9 +539,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yxgg.pokemon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
