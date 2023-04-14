@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1D41C1529E9C178004C092D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D41C1429E9C178004C092D /* TabBarViewController.swift */; };
+		E1D41C1A29E9C316004C092D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D41C1829E9C316004C092D /* HomeViewController.swift */; };
+		E1D41C1B29E9C316004C092D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D41C1929E9C316004C092D /* HomeViewController.xib */; };
+		E1D41C1F29E9C333004C092D /* MyBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D41C1D29E9C333004C092D /* MyBagViewController.swift */; };
+		E1D41C2029E9C333004C092D /* MyBagViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1D41C1E29E9C333004C092D /* MyBagViewController.xib */; };
 		E1E7D02029E9BC6700942264 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E7D01F29E9BC6700942264 /* AppDelegate.swift */; };
 		E1E7D02229E9BC6700942264 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E7D02129E9BC6700942264 /* SceneDelegate.swift */; };
-		E1E7D02429E9BC6700942264 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E7D02329E9BC6700942264 /* ViewController.swift */; };
-		E1E7D02729E9BC6700942264 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E7D02529E9BC6700942264 /* Main.storyboard */; };
 		E1E7D02A29E9BC6700942264 /* pokemon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1E7D02829E9BC6700942264 /* pokemon.xcdatamodeld */; };
 		E1E7D02C29E9BC6D00942264 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E7D02B29E9BC6D00942264 /* Assets.xcassets */; };
 		E1E7D02F29E9BC6D00942264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E7D02D29E9BC6D00942264 /* LaunchScreen.storyboard */; };
@@ -37,11 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E1D41C1429E9C178004C092D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		E1D41C1829E9C316004C092D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E1D41C1929E9C316004C092D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		E1D41C1D29E9C333004C092D /* MyBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBagViewController.swift; sourceTree = "<group>"; };
+		E1D41C1E29E9C333004C092D /* MyBagViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBagViewController.xib; sourceTree = "<group>"; };
 		E1E7D01C29E9BC6700942264 /* pokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E7D01F29E9BC6700942264 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E7D02129E9BC6700942264 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E1E7D02329E9BC6700942264 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E1E7D02629E9BC6700942264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1E7D02929E9BC6700942264 /* pokemon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = pokemon.xcdatamodel; sourceTree = "<group>"; };
 		E1E7D02B29E9BC6D00942264 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1E7D02E29E9BC6D00942264 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -112,6 +118,8 @@
 		E11E4C6029E9C08200A15049 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E1D41C1329E9C162004C092D /* Base */,
+				E1D41C1629E9C2C8004C092D /* Features */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -121,6 +129,41 @@
 			children = (
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E1D41C1329E9C162004C092D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E1D41C1429E9C178004C092D /* TabBarViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E1D41C1629E9C2C8004C092D /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E1D41C1C29E9C31D004C092D /* MyBag */,
+				E1D41C1729E9C2D4004C092D /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		E1D41C1729E9C2D4004C092D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E1D41C1829E9C316004C092D /* HomeViewController.swift */,
+				E1D41C1929E9C316004C092D /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E1D41C1C29E9C31D004C092D /* MyBag */ = {
+			isa = PBXGroup;
+			children = (
+				E1D41C1D29E9C333004C092D /* MyBagViewController.swift */,
+				E1D41C1E29E9C333004C092D /* MyBagViewController.xib */,
+			);
+			path = MyBag;
 			sourceTree = "<group>";
 		};
 		E1E7D01329E9BC6700942264 = {
@@ -150,8 +193,6 @@
 				E11E4C5E29E9C07D00A15049 /* Data */,
 				E11E4C5F29E9C07F00A15049 /* Domain */,
 				E11E4C6029E9C08200A15049 /* Presentation */,
-				E1E7D02329E9BC6700942264 /* ViewController.swift */,
-				E1E7D02529E9BC6700942264 /* Main.storyboard */,
 				E11E4C5C29E9BF7000A15049 /* Supporting Files */,
 				E11E4C6129E9C09900A15049 /* Utilities */,
 				E1E7D02D29E9BC6D00942264 /* LaunchScreen.storyboard */,
@@ -284,7 +325,8 @@
 			files = (
 				E1E7D02F29E9BC6D00942264 /* LaunchScreen.storyboard in Resources */,
 				E1E7D02C29E9BC6D00942264 /* Assets.xcassets in Resources */,
-				E1E7D02729E9BC6700942264 /* Main.storyboard in Resources */,
+				E1D41C1B29E9C316004C092D /* HomeViewController.xib in Resources */,
+				E1D41C2029E9C333004C092D /* MyBagViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,10 +351,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E7D02429E9BC6700942264 /* ViewController.swift in Sources */,
+				E1D41C1A29E9C316004C092D /* HomeViewController.swift in Sources */,
+				E1D41C1529E9C178004C092D /* TabBarViewController.swift in Sources */,
 				E1E7D02A29E9BC6700942264 /* pokemon.xcdatamodeld in Sources */,
 				E1E7D02029E9BC6700942264 /* AppDelegate.swift in Sources */,
 				E1E7D02229E9BC6700942264 /* SceneDelegate.swift in Sources */,
+				E1D41C1F29E9C333004C092D /* MyBagViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,14 +393,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E1E7D02529E9BC6700942264 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E1E7D02629E9BC6700942264 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E1E7D02D29E9BC6D00942264 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -418,7 +454,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -472,7 +508,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -495,7 +531,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Pokedex;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -528,7 +563,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Pokedex;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
