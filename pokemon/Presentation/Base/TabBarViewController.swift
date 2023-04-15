@@ -42,6 +42,8 @@ class TabBarViewController: UITabBarController {
         myBagController.tabBarItem.title = "My Bag"
         myBagController.tabBarItem.image = UIImage(systemName: "bookmark")
         myBagController.tabBarItem.selectedImage = UIImage(systemName: "bookmark.fill")
+        let myBagViewModel = MyBagViewModel(myBagUseCase: Injection().provideMyBagUseCase())
+        myBagController.viewModel = myBagViewModel
         return myBagController
     }
 }

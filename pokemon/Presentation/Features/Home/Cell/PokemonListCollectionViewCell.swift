@@ -30,4 +30,13 @@ class PokemonListCollectionViewCell: UICollectionViewCell {
             self.pokemonImageView.image = getUIImage(named: "pokeball")
         }
     }
+    
+    func configureContentMyBag(myBag: PokemonBag?) {
+        self.pokemonNameLabel.text = myBag?.nickname
+        if let imageUrl = myBag?.pokemon.sprites?.other?.officialArtwork?.frontDefault {
+            self.pokemonImageView.loadImage(uri: imageUrl, placeholder: getUIImage(named: "pokeball"))
+        } else {
+            self.pokemonImageView.image = getUIImage(named: "pokeball")
+        }
+    }
 }

@@ -13,6 +13,7 @@ protocol LocalDataSourceProtocol {
     func checkPokemonInCollection(pokemonId: Int) -> Observable<(Bool, String?)>
     func catchPokemon(nickname: String, pokemon: Pokemon) -> Observable<Bool>
     func releasedPokemon(nickname: String) -> Observable<Bool>
+    func getMyBags() -> Observable<[PokemonBag]>
 }
 
 final class LocalDataSource: LocalDataSourceProtocol {
@@ -78,6 +79,29 @@ final class LocalDataSource: LocalDataSourceProtocol {
                     print("Failed to delete")
                     observer.onError(DatabaseError.requestFailed)
                 }
+            } catch {
+                print("Failed retrieve")
+                observer.onError(DatabaseError.requestFailed)
+            }
+            return Disposables.create()
+        }
+    }
+    
+    func getMyBags() -> Observable<[PokemonBag]> {
+        return Observable<[PokemonBag]>.create { observer in
+            var collections: [PokemonBag] = []
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return Disposables.create() }
+            let managedContext = appDelegate.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MyBag")
+            do {
+                let result = try managedContext.fetch(fetchRequest)
+                for data in result as! [NSManagedObject] {
+                    guard let nickname = data.value(forKey: "nickname") as? String, let pokemonData = data.value(forKey: "pokemon") as? Data, let pokemon = Utils.getPokemonFromData(data: pokemonData) else { continue }
+                    let bag = PokemonBag(nickname: nickname, pokemon: pokemon)
+                    collections.append(bag)
+                }
+                observer.onNext(collections)
+                observer.onCompleted()
             } catch {
                 print("Failed retrieve")
                 observer.onError(DatabaseError.requestFailed)

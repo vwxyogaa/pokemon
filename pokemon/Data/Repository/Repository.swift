@@ -16,7 +16,7 @@ protocol RepositoryProtocol {
     func checkPokemonInCollection(pokemonId: Int) -> Observable<(Bool, String?)>
     func catchPokemon(nickname: String, pokemon: Pokemon) -> Observable<Bool>
     func releasedPokemon(nickname: String) -> Observable<Bool>
-    
+    func getMyBags() -> Observable<[PokemonBag]>
 }
 
 final class Repository: NSObject {
@@ -56,5 +56,9 @@ extension Repository: RepositoryProtocol {
     
     func releasedPokemon(nickname: String) -> Observable<Bool> {
         return local.releasedPokemon(nickname: nickname)
+    }
+    
+    func getMyBags() -> Observable<[PokemonBag]> {
+        return local.getMyBags()
     }
 }
