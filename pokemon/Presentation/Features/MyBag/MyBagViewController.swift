@@ -42,7 +42,7 @@ class MyBagViewController: UIViewController {
     private func initObservers() {
         viewModel.pokemons.drive(onNext: { [weak self] pokemon in
             if pokemon.isEmpty {
-                self?.myBagCollectionView.setBackground(imageName: "xmark_icloud", messageImage: "Not Found")
+                self?.myBagCollectionView.setBackground(imageName: "xmark_icloud", messageImage: "You don't have any pokemon in bag")
             } else {
                 self?.myBagCollectionView.clearBackground()
             }
