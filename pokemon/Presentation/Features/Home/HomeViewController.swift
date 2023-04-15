@@ -83,6 +83,14 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailViewController = DetailViewController()
+        let detailPokemonViewModel = DetailViewModel(detailUseCase: Injection().provideDetailUeCase(), pokemon: viewModel.pokemon(at: indexPath.row))
+        detailViewController.viewModel = detailPokemonViewModel
+        detailViewController.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(detailViewController, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let paddingSpaceHorizontal: CGFloat = 15 * (2 + 1)
         let paddingSpaceVertical: CGFloat = 8 * (5 + 2)

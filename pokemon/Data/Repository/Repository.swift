@@ -12,18 +12,25 @@ protocol RepositoryProtocol {
     // MARK: - Remote
     func getPokemonList(page: Int) -> Observable<[Int]>
     func getPokemonDetail(id: Int) -> Observable<Pokemon>
+    // MARK: - Locale
+    func checkPokemonInCollection(pokemonId: Int) -> Observable<(Bool, String?)>
+    func catchPokemon(nickname: String, pokemon: Pokemon) -> Observable<Bool>
+    func releasedPokemon(nickname: String) -> Observable<Bool>
+    
 }
 
 final class Repository: NSObject {
-    typealias PokemonInstance = (RemoteDataSource) -> Repository
+    typealias PokemonInstance = (RemoteDataSource, LocalDataSource) -> Repository
     fileprivate let remote: RemoteDataSource
+    fileprivate let local: LocalDataSource
     
-    init(remote: RemoteDataSource) {
+    init(remote: RemoteDataSource, local: LocalDataSource) {
         self.remote = remote
+        self.local = local
     }
     
-    static let sharedInstance: PokemonInstance = { remote in
-        return Repository(remote: remote)
+    static let sharedInstance: PokemonInstance = { remote, local in
+        return Repository(remote: remote, local: local)
     }
 }
 
@@ -36,5 +43,18 @@ extension Repository: RepositoryProtocol {
     
     func getPokemonDetail(id: Int) -> Observable<Pokemon> {
         return remote.getPokemonDetail(id: id)
+    }
+    
+    // MARK: - Locale
+    func checkPokemonInCollection(pokemonId: Int) -> Observable<(Bool, String?)> {
+        return local.checkPokemonInCollection(pokemonId: pokemonId)
+    }
+    
+    func catchPokemon(nickname: String, pokemon: Pokemon) -> Observable<Bool> {
+        return local.catchPokemon(nickname: nickname, pokemon: pokemon)
+    }
+    
+    func releasedPokemon(nickname: String) -> Observable<Bool> {
+        return local.releasedPokemon(nickname: nickname)
     }
 }
