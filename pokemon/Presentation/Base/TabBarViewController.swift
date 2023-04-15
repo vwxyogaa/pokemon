@@ -23,7 +23,6 @@ class TabBarViewController: UITabBarController {
     
     private func makeNavigation(viewController: UIViewController) -> UINavigationController {
         let navigation = UINavigationController(rootViewController: viewController)
-        navigation.delegate = self
         navigation.navigationBar.prefersLargeTitles = false
         return navigation
     }
@@ -44,18 +43,5 @@ class TabBarViewController: UITabBarController {
         myBagController.tabBarItem.image = UIImage(systemName: "bookmark")
         myBagController.tabBarItem.selectedImage = UIImage(systemName: "bookmark.fill")
         return myBagController
-    }
-}
-
-// MARK: - UINavigationControllerDelegate
-extension UIViewController: UINavigationControllerDelegate {
-    public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        if #available(iOS 14.0, *) {
-            viewController.navigationItem.backButtonDisplayMode = .minimal
-        } else {
-            // Fallback on earlier versions
-            viewController.navigationItem.backButtonTitle = ""
-        }
-        viewController.navigationController?.navigationBar.tintColor = .white
     }
 }

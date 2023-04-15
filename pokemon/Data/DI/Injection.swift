@@ -10,11 +10,17 @@ final class Injection {
         let repository = provideRepository()
         return HomeUseCase(repository: repository)
     }
+    
+    func provideDetailUeCase() -> DetailUseCaseProtocol {
+        let repository = provideRepository()
+        return DetailUseCase(repository: repository)
+    }
 }
 
 extension Injection {
     func provideRepository() -> RepositoryProtocol {
         let remoteDataSource = RemoteDataSource()
-        return Repository.sharedInstance(remoteDataSource)
+        let localDataSource = LocalDataSource()
+        return Repository.sharedInstance(remoteDataSource, localDataSource)
     }
 }
