@@ -43,6 +43,8 @@
 		E1D9811629EA563800DC0AAA /* PokemonCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9811529EA563800DC0AAA /* PokemonCollection.swift */; };
 		E1D9811829EA565400DC0AAA /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9811729EA565400DC0AAA /* Utils.swift */; };
 		E1D9811A29EA56D400DC0AAA /* DetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9811929EA56D400DC0AAA /* DetailUseCase.swift */; };
+		E1D9811C29EA662800DC0AAA /* MyBagUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9811B29EA662800DC0AAA /* MyBagUseCase.swift */; };
+		E1D9811F29EA666F00DC0AAA /* MyBagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D9811E29EA666F00DC0AAA /* MyBagViewModel.swift */; };
 		E1E7D02029E9BC6700942264 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E7D01F29E9BC6700942264 /* AppDelegate.swift */; };
 		E1E7D02229E9BC6700942264 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E7D02129E9BC6700942264 /* SceneDelegate.swift */; };
 		E1E7D02A29E9BC6700942264 /* pokemon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1E7D02829E9BC6700942264 /* pokemon.xcdatamodeld */; };
@@ -102,6 +104,8 @@
 		E1D9811529EA563800DC0AAA /* PokemonCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCollection.swift; sourceTree = "<group>"; };
 		E1D9811729EA565400DC0AAA /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E1D9811929EA56D400DC0AAA /* DetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUseCase.swift; sourceTree = "<group>"; };
+		E1D9811B29EA662800DC0AAA /* MyBagUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBagUseCase.swift; sourceTree = "<group>"; };
+		E1D9811E29EA666F00DC0AAA /* MyBagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBagViewModel.swift; sourceTree = "<group>"; };
 		E1E7D01C29E9BC6700942264 /* pokemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E7D01F29E9BC6700942264 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E7D02129E9BC6700942264 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -261,6 +265,7 @@
 			children = (
 				E19F8DE129E9D22000A67553 /* HomeUseCase.swift */,
 				E1D9811929EA56D400DC0AAA /* DetailUseCase.swift */,
+				E1D9811B29EA662800DC0AAA /* MyBagUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 		E1D41C1C29E9C31D004C092D /* MyBag */ = {
 			isa = PBXGroup;
 			children = (
+				E1D9811D29EA666700DC0AAA /* ViewModel */,
 				E1D41C1D29E9C333004C092D /* MyBagViewController.swift */,
 				E1D41C1E29E9C333004C092D /* MyBagViewController.xib */,
 			);
@@ -373,6 +379,14 @@
 				E1D9811329EA561900DC0AAA /* LocaleDataSource.swift */,
 			);
 			path = Locale;
+			sourceTree = "<group>";
+		};
+		E1D9811D29EA666700DC0AAA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E1D9811E29EA666F00DC0AAA /* MyBagViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		E1E7D01329E9BC6700942264 = {
@@ -575,6 +589,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E19F8DFC29E9D6CD00A67553 /* UIImageView+Ext.swift in Sources */,
+				E1D9811C29EA662800DC0AAA /* MyBagUseCase.swift in Sources */,
 				E1D41C1A29E9C316004C092D /* HomeViewController.swift in Sources */,
 				E1D9810D29EA514C00DC0AAA /* DetailViewController.swift in Sources */,
 				E19F8DD429E9CFE800A67553 /* Pokemon.swift in Sources */,
@@ -584,6 +599,7 @@
 				E19F8DEB29E9D2CD00A67553 /* HomeViewModel.swift in Sources */,
 				E1D9811A29EA56D400DC0AAA /* DetailUseCase.swift in Sources */,
 				E1D9811829EA565400DC0AAA /* Utils.swift in Sources */,
+				E1D9811F29EA666F00DC0AAA /* MyBagViewModel.swift in Sources */,
 				E1D41C1529E9C178004C092D /* TabBarViewController.swift in Sources */,
 				E1D9811129EA55BF00DC0AAA /* DetailViewModel.swift in Sources */,
 				E19F8DDB29E9D15E00A67553 /* APIManager.swift in Sources */,
