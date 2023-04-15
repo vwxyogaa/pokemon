@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import netfox
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
