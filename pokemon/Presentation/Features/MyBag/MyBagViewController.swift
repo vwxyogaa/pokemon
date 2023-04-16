@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import Components
 
 class MyBagViewController: UIViewController {
     @IBOutlet weak var myBagCollectionView: UICollectionView!

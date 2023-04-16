@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import Components
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var pokemonListCollectionView: UICollectionView!
