@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E12F136B29EBF3F200DBA3F5 /* Components in Frameworks */ = {isa = PBXBuildFile; productRef = E12F136A29EBF3F200DBA3F5 /* Components */; };
 		E12F136D29EBF49600DBA3F5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12F136C29EBF49600DBA3F5 /* Utils.swift */; };
+		E16D39AA29EC002E00C99C4B /* Components in Frameworks */ = {isa = PBXBuildFile; productRef = E16D39A929EC002E00C99C4B /* Components */; };
 		E19F8DC229E9CE5D00A67553 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E19F8DC129E9CE5D00A67553 /* Alamofire */; };
 		E19F8DC529E9CE7E00A67553 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E19F8DC429E9CE7E00A67553 /* Kingfisher */; };
 		E19F8DC829E9CEAF00A67553 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = E19F8DC729E9CEAF00A67553 /* netfox */; };
@@ -67,7 +67,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E12F136829EBF18D00DBA3F5 /* Components */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Components; sourceTree = "<group>"; };
 		E12F136C29EBF49600DBA3F5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E19F8DD029E9CFAF00A67553 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
 		E19F8DD329E9CFE800A67553 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
@@ -115,7 +114,7 @@
 			files = (
 				E19F8DC529E9CE7E00A67553 /* Kingfisher in Frameworks */,
 				E19F8DC229E9CE5D00A67553 /* Alamofire in Frameworks */,
-				E12F136B29EBF3F200DBA3F5 /* Components in Frameworks */,
+				E16D39AA29EC002E00C99C4B /* Components in Frameworks */,
 				E19F8DCD29E9CED900A67553 /* RxSwift in Frameworks */,
 				E19F8DCB29E9CED900A67553 /* RxCocoa in Frameworks */,
 				E19F8DC829E9CEAF00A67553 /* netfox in Frameworks */,
@@ -186,14 +185,6 @@
 				E1D41C1629E9C2C8004C092D /* Features */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		E12F136729EBF18D00DBA3F5 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				E12F136829EBF18D00DBA3F5 /* Components */,
-			);
-			name = Packages;
 			sourceTree = "<group>";
 		};
 		E12F136929EBF3F200DBA3F5 /* Frameworks */ = {
@@ -366,7 +357,6 @@
 		E1E7D01329E9BC6700942264 = {
 			isa = PBXGroup;
 			children = (
-				E12F136729EBF18D00DBA3F5 /* Packages */,
 				E1E7D01E29E9BC6700942264 /* pokemon */,
 				E1E7D03829E9BC6E00942264 /* pokemonTests */,
 				E1E7D04229E9BC6E00942264 /* pokemonUITests */,
@@ -438,7 +428,7 @@
 				E19F8DC729E9CEAF00A67553 /* netfox */,
 				E19F8DCA29E9CED900A67553 /* RxCocoa */,
 				E19F8DCC29E9CED900A67553 /* RxSwift */,
-				E12F136A29EBF3F200DBA3F5 /* Components */,
+				E16D39A929EC002E00C99C4B /* Components */,
 			);
 			productName = pokemon;
 			productReference = E1E7D01C29E9BC6700942264 /* pokemon.app */;
@@ -517,6 +507,7 @@
 				E19F8DC329E9CE7E00A67553 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				E19F8DC629E9CEAF00A67553 /* XCRemoteSwiftPackageReference "netfox" */,
 				E19F8DC929E9CED900A67553 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				E16D39A829EC002E00C99C4B /* XCRemoteSwiftPackageReference "Modularization-Components" */,
 			);
 			productRefGroup = E1E7D01D29E9BC6700942264 /* Products */;
 			projectDirPath = "";
@@ -932,6 +923,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E16D39A829EC002E00C99C4B /* XCRemoteSwiftPackageReference "Modularization-Components" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vwxyogaa/Modularization-Components.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		E19F8DC029E9CE5D00A67553 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -967,8 +966,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E12F136A29EBF3F200DBA3F5 /* Components */ = {
+		E16D39A929EC002E00C99C4B /* Components */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = E16D39A829EC002E00C99C4B /* XCRemoteSwiftPackageReference "Modularization-Components" */;
 			productName = Components;
 		};
 		E19F8DC129E9CE5D00A67553 /* Alamofire */ = {

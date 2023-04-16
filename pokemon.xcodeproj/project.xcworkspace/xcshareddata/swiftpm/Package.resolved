@@ -19,6 +19,15 @@
       }
     },
     {
+      "identity" : "modularization-components",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vwxyogaa/Modularization-Components.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "75b269e9cc8a9571755935990a2c06b675364606"
+      }
+    },
+    {
       "identity" : "netfox",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kasketis/netfox",
