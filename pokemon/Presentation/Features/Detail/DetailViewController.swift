@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import Components
 
 class DetailViewController: UIViewController {
     @IBOutlet weak var pokemonImageView: UIImageView!

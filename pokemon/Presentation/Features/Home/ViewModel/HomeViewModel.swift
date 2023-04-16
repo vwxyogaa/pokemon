@@ -7,6 +7,7 @@
 
 import RxSwift
 import RxCocoa
+import Components
 
 class HomeViewModel: BaseViewModel {
     private let disposeBag = DisposeBag()
